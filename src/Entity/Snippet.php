@@ -17,33 +17,34 @@ class Snippet
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
+    private string $title;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $description;
+    private string $description;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $code;
+    private string $code;
 
     /**
      * @ORM\ManyToOne(targetEntity=Language::class, inversedBy="snippets")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $language;
+    private Language $language;
 
     /**
+     * @var ArrayCollection<int,Tag>
      * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="snippets")
      */
-    private $tags;
+    private ArrayCollection $tags;
 
     public function __construct()
     {
@@ -96,7 +97,7 @@ class Snippet
         return $this->language;
     }
 
-    public function setLanguage(?Language $language): self
+    public function setLanguage(Language $language): self
     {
         $this->language = $language;
 

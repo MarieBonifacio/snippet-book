@@ -17,17 +17,18 @@ class Tag
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private string $name;
 
     /**
+     * @var ArrayCollection<int,Snippet>
      * @ORM\ManyToMany(targetEntity=Snippet::class, mappedBy="tags")
      */
-    private $snippets;
+    private ArrayCollection $snippets;
 
     public function __construct()
     {
