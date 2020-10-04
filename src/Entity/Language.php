@@ -27,10 +27,10 @@ class Language
     private string $name;
 
     /**
-     * @var ArrayCollection<int,Snippet>
+     * @var Collection<int,Snippet>
      * @ORM\OneToMany(targetEntity=Snippet::class, mappedBy="language", orphanRemoval=true)
      */
-    private ArrayCollection $snippets;
+    private Collection $snippets;
 
     public function __construct()
     {
