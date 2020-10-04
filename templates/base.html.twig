@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         {{ encore_entry_link_tags('tailwind') }}
+        {{  encore_entry_script_tags('js/app') }}
     </head>
     <body class="bg-gray-500 h-screen">
         <nav class="w-full h-10 bg-black text-white flex flex-row justify-between items-center">
