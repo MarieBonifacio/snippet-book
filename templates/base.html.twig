@@ -6,7 +6,18 @@
         {% block stylesheets %}{% endblock %}
         {{ encore_entry_link_tags('tailwind') }}
     </head>
-    <body class="bg-red-500">
+    <body>
+        <nav>
+            <div>
+                <a href=""><img src=""></a>
+                <h1><a href="">Snippet Book</a></h1>
+            </div>
+            <ul>
+                <li><a href="">Language</a></li>
+                <li><a href="">Tag</a></li>
+                <li><a href="">Random</a></li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

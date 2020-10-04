@@ -9,13 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/snippets/{language}", name="default")
+     * @Route("/", name="home")
      */
-    public function index(?string $name)
+    public function index()
     {
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
-            'name' => $name,
         ]);
     }
 }
