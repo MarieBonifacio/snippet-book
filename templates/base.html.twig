@@ -6,13 +6,13 @@
         {% block stylesheets %}{% endblock %}
         {{ encore_entry_link_tags('tailwind') }}
     </head>
-    <body>
-        <nav>
+    <body class="bg-gray-500">
+        <nav class="w-full h-10 bg-black text-white flex flex-row justify-between items-center">
             <div>
                 <a href=""><img src=""></a>
                 <h1><a href="">Snippet Book</a></h1>
             </div>
-            <ul>
+            <ul  class="w-1/2 flex flex-row justify-around">
                 <li><a href="">Language</a></li>
                 <li><a href="">Tag</a></li>
                 <li><a href="">Random</a></li>
