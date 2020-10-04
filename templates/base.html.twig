@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        {{ encore_entry_link_tags('tailwind') }}
     </head>
-    <body>
+    <body class="bg-red-500">
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

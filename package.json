@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.31.0",
+    "autoprefixer": "^10.0.1",
+    "postcss-loader": "^4.0.3",
+    "tailwindcss": "^1.8.10"
+  },
+  "scripts": {
+    "watch": "encore dev --watch"
+  },
+  "dependencies": {
+    "postcss": "^8.1.1"
+  }
+}
