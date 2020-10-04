@@ -53,7 +53,7 @@ class Tag
     }
 
     /**
-     * @return Collection|Snippet[]
+     * @return Collection<int,Snippet>
      */
     public function getSnippets(): Collection
     {

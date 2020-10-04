@@ -27,7 +27,7 @@ class Snippet
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private string $description;
+    private ?string $description;
 
     /**
      * @ORM\Column(type="text")
@@ -38,7 +38,7 @@ class Snippet
      * @ORM\ManyToOne(targetEntity=Language::class, inversedBy="snippets")
      * @ORM\JoinColumn(nullable=false)
      */
-    private Language $language;
+    private ?Language $language;
 
     /**
      * @var ArrayCollection<int,Tag>
@@ -97,7 +97,7 @@ class Snippet
         return $this->language;
     }
 
-    public function setLanguage(Language $language): self
+    public function setLanguage(?Language $language): self
     {
         $this->language = $language;
 
@@ -105,7 +105,7 @@ class Snippet
     }
 
     /**
-     * @return Collection|Tag[]
+     * @return Collection<int,Tag>
      */
     public function getTags(): Collection
     {
