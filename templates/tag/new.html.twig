@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un tag{% endblock %}
+
+{% block body %}
+    <div class="flex flex-col justify-start items-center mt-48">
+        <h1 class="text-center text-lg text-4xl mb-10">Ajouter un tag</h1>
+        <div class="w-full h-auto align-middle text-black flex flex-row justify-center items-center">
+            {{form_start(form)}}
+                {{ form_widget(form.name, { 'attr': {'class': 'py-2 px-2'} }) }}
+                {{ form_widget(form.save, { 'attr': {'class': 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'} }) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form) }}
+                </div>
+            {{form_end(form)}}
+        </div>
+    </div>
+
+{% endblock %}

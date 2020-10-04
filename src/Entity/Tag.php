@@ -27,10 +27,10 @@ class Tag
     private string $name;
 
     /**
-     * @var ArrayCollection<int,Snippet>
+     * @var Collection<int,Snippet>
      * @ORM\ManyToMany(targetEntity=Snippet::class, mappedBy="tags")
      */
-    private ArrayCollection $snippets;
+    private Collection $snippets;
 
     public function __construct()
     {

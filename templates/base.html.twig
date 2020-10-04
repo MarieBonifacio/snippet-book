@@ -6,7 +6,7 @@
         {% block stylesheets %}{% endblock %}
         {{ encore_entry_link_tags('tailwind') }}
     </head>
-    <body class="bg-gray-500">
+    <body class="bg-gray-500 h-screen">
         <nav class="w-full h-10 bg-black text-white flex flex-row justify-between items-center">
             <div>
                 <a href=""><img src=""></a>
@@ -18,6 +18,11 @@
                 <li><a href="">Random</a></li>
             </ul>
         </nav>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
