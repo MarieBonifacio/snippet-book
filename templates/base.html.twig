@@ -6,17 +6,20 @@
         {% block stylesheets %}{% endblock %}
         {{ encore_entry_link_tags('tailwind') }}
         {{  encore_entry_script_tags('js/app') }}
+        <link href="themes/prism.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="prism-live.css">
     </head>
     <body class="bg-gray-500 h-screen">
         <nav class="w-full h-10 bg-black text-white flex flex-row justify-between items-center">
             <div>
                 <a href=""><img src=""></a>
-                <h1><a href="">Snippet Book</a></h1>
+                <h1><a href="{{ path('home') }}">Snippet Book</a></h1>
             </div>
             <ul  class="w-1/2 flex flex-row justify-around">
-                <li><a href="">Language</a></li>
-                <li><a href="">Tag</a></li>
-                <li><a href="">Random</a></li>
+                <li><a href="{{ path('language') }}">Language</a></li>
+                <li><a href="{{ path('tag') }}">Tag</a></li>
+                <li><a href="{{ path('snippet') }}">Random</a></li>
             </ul>
         </nav>
         {% for message in app.flashes('success') %}
@@ -26,5 +29,7 @@
         {% endfor %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script src="prism.js"></script>
+        <script src="prism-live.js?load=css,html,javascript"></script>
     </body>
 </html>

@@ -120,6 +120,9 @@
     "phpstan/phpstan": {
         "version": "0.12.48"
     },
+    "prismjs/prism": {
+        "version": "v1.21.0"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },

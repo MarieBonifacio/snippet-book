@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2fcb859ad95ba40274a50caa769c49c",
+    "content-hash": "7c89e5955e0cb8dc01db1844186dfc80",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -2010,6 +2010,42 @@
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "time": "2020-09-17T18:55:26+00:00"
+        },
+        {
+            "name": "prismjs/prism",
+            "version": "v1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PrismJS/prism.git",
+                "reference": "187c8a607ee70c7914682870156faa31ed01f001"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrismJS/prism/zipball/187c8a607ee70c7914682870156faa31ed01f001",
+                "reference": "187c8a607ee70c7914682870156faa31ed01f001",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "prism.js"
+                    ],
+                    "styles": [
+                        "themes/prism.css"
+                    ],
+                    "files": [
+                        "themes/*",
+                        "components/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
+            "time": "2020-08-06T23:17:18+00:00"
         },
         {
             "name": "psr/cache",

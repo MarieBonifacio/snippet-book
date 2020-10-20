@@ -5,23 +5,40 @@
 {% block body %}
     <div class="flex flex-col justify-start items-center mt-48">
         <h1 class="text-center text-lg text-4xl mb-10">Ajouter un snippet</h1>
-        <div class="w-full h-auto align-middle text-black flex flex-row justify-center items-center">
+        <div class="w-full h-auto align-middle text-black flex flex-col justify-center items-center">
             {{form_start(form)}}
-                {{ form_widget(form.title, { 'attr': {'class': 'py-2 px-2'} }) }}
-                {{ form_widget(form.description, { 'attr': {'class': 'py-2 px-2'} }) }}
-                {{ form_widget(form.code, { 'attr': {'class': 'py-2 px-2'} }) }}
-                {{ form_widget(form.language, { 'attr': {'class': 'py-2 px-2'} }) }}
-                {# {{ form_widget(form.tags, { 'attr': {'class': 'py-2 px-2'} }) }} #}
-                <ul class="tags" data-prototype="{{ form_widget(form.tags.vars.prototype)|e('html_attr') }}">
-                    {% for tag in form.tags %}
-                        <li>{{form_row(tag.name)}}</li>
-                    {% endfor %}
-                </ul>
-                {{ form_widget(form.save, { 'attr': {'class': 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'} }) }}
+                <div class="flex flex-col justify-start items-center space-y-3">
+                <div>
+                    {{ form_widget(form.title, { 'attr': {'class': 'py-2 px-2'} }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.description, { 'attr': {'class': 'py-2 px-2'} }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.code, { 'attr': {'class': 'prism-live language-php py-2 px-2'} }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.language, { 'attr': {'class': 'py-2 px-2'} }) }}
+                </div>
+                <div>
+                    {# {{ form_widget(form.tags, { 'attr': {'class': 'py-2 px-2'} }) }} #}
+                </div>
+                <div>
+                    <ul class="tags" data-prototype="{{ form_widget(form.tags.vars.prototype)|e('html_attr') }}">
+                        {% for tag in form.tags %}
+                            <li>{{form_row(tag.name)}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    {{ form_widget(form.save, { 'attr': {'class': 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'} }) }}
+                </div>
+                <div>
                 <div class="my-custom-class-for-errors">
                     {{ form_errors(form) }}
                 </div>
-            {{form_end(form)}}
+            </div>
+        {{form_end(form)}}
         </div>
     </div>
     
